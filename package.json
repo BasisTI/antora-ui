@@ -1,11 +1,11 @@
 {
   "name": "@antora/ui-default",
-  "description": "An archetype project that produces a UI for creating documentation sites with Antora",
-  "homepage": "https://gitlab.com/antora/antora-ui-default",
+  "description": "Projeto com a interface visual para Antora",
+  "homepage": "https://gitlab.basis.com.br/foundation/biblioteca_de_ativos/foundation-antora-ui",
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/antora/antora-ui-default.git"
+    "url": "https://gitlab.basis.com.br/foundation/biblioteca_de_ativos/foundation-antora-ui.git"
   },
   "engines": {
     "node": ">= 8.0.0"
@@ -52,5 +52,8 @@
     "stylelint": "~13.3",
     "stylelint-config-standard": "~20.0",
     "vinyl-fs": "~3.0"
+  },
+  "dependencies": {
+    "bpmn-js": "^18.6.2"
   }
 }
