@@ -3,6 +3,7 @@
   "description": "Projeto com a interface visual para Antora",
   "homepage": "https://gitlab.basis.com.br/foundation/biblioteca_de_ativos/foundation-antora-ui",
   "license": "MPL-2.0",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://gitlab.basis.com.br/foundation/biblioteca_de_ativos/foundation-antora-ui.git"
