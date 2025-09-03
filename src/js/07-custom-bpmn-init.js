@@ -48,7 +48,7 @@ function extractBizagiExtensions (businessObject) {
   return extensions
 }
 
-function createExtensionSection (title, content) {
+function createExtensionSection (title, clazz, content) {
   if (!content || content.trim() === '') return ''
 
   const tempDiv = document.createElement('div')
@@ -56,7 +56,7 @@ function createExtensionSection (title, content) {
   const cleanContent = tempDiv.innerHTML
 
   return `
-    <div class="bpmn-extension-section">
+    <div class="bpmn-extension-section ${clazz}">
       <h4 class="bpmn-extension-title">${title}</h4>
       <div class="bpmn-extension-content">${cleanContent}</div>
     </div>
@@ -106,9 +106,9 @@ function setupDocumentationDisplay (viewer, containerId) {
     // Extract and add Bizagi extensions
     const extensions = extractBizagiExtensions(businessObject)
     const extensionSections = [
-      createExtensionSection('Entradas', extensions.entradas),
-      createExtensionSection('Saídas', extensions.saidas),
-      createExtensionSection('Ferramentas', extensions.ferramentas),
+      createExtensionSection('Entradas', 'entradas', extensions.entradas),
+      createExtensionSection('Saídas', 'saidas', extensions.saidas),
+      createExtensionSection('Ferramentas', 'ferramentas', extensions.ferramentas),
     ].filter((section) => section !== '').join('')
 
     if (extensionSections) {
